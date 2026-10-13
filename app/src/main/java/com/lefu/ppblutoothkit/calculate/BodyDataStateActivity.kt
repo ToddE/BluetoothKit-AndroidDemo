@@ -52,7 +52,7 @@ class BodyDataStateActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "身体数据状态",
+                title = getString(R.string.msg_body_data_state),
                 showBackButton = true
             )
         }

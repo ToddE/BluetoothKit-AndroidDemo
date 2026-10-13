@@ -93,7 +93,7 @@ class ScanDeviceListActivity : BaseImmersivePermissionActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setupUnifiedToolbar(
             toolbar = toolbar,
-            title = "设备扫描",
+            title = getString(R.string.msg_device_scan),
             showBackButton = true
         )
     }

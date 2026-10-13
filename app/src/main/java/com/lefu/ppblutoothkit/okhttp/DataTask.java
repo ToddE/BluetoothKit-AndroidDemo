@@ -114,7 +114,7 @@ public class DataTask {
                             }
                         });
                     } else {
-                        String errorMsg = "HTTP错误: " + response.code() + " " + response.message();
+                        String errorMsg = "HTTP error: " + response.code() + " " + response.message();
                         LogUtils.INSTANCE.writeNetworkLog("GET请求HTTP错误", "URL: " + url, errorMsg + ", 耗时: " + duration + "ms");
                         
                         // 在主线程中调用回调

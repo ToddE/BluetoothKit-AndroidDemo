@@ -73,7 +73,7 @@ class PeripheralGrapesActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Grapes设备",
+                title = getString(R.string.msg_title_grapes),
                 showBackButton = true
             )
         }

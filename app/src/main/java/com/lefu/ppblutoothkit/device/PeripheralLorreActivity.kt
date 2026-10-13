@@ -246,7 +246,7 @@ class PeripheralLorreActivity : BaseImmersivePermissionActivity() {
         }
         
         findViewById<Button>(R.id.testImpedance).setOnClickListener {
-            addPrint("开始测试阻抗解析...")
+            addPrint(getString(R.string.msg_start_impedance_test))
 //            testImpedanceAnalysis()
 
         }

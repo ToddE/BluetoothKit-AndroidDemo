@@ -79,7 +79,7 @@ class PeripheralEggActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Egg设备",
+                title = getString(R.string.msg_title_egg),
                 showBackButton = true
             )
         }

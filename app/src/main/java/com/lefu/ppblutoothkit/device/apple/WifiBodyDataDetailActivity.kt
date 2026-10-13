@@ -32,7 +32,7 @@ class WifiBodyDataDetailActivity : BaseImmersivePermissionActivity() {
         if (toolbar != null) {
             setupUnifiedToolbar(
                 toolbar,
-                "WiFi体重数据详情",
+                getString(R.string.msg_wifi_weight_detail),
                 true
             )
         }

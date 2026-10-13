@@ -42,11 +42,11 @@ abstract class BasePermissionActivity : Activity() {
                 if (CommonUtils.isLocationEnabled(this)) {
                     //已经可以进行蓝牙操作
                 } else {
-                    Toast.makeText(this@BasePermissionActivity, "请开启定位开关", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@BasePermissionActivity, getString(R.string.msg_turn_on_location), Toast.LENGTH_LONG).show()
                 }
             }
         } else {
-            Toast.makeText(this@BasePermissionActivity, "权限禁止后无法使用蓝牙，随后请到设备设置权限页开启", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@BasePermissionActivity, getString(R.string.msg_bt_permission_denied), Toast.LENGTH_LONG).show()
         }
     }
 

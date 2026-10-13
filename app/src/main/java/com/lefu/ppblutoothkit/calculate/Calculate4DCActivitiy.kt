@@ -58,7 +58,7 @@ class Calculate4DCActivitiy : BaseImmersivePermissionActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setupUnifiedToolbar(
             toolbar = toolbar,
-            title = "直流秤计算",
+            title = getString(R.string.msg_calc_dc),
             showBackButton = true
         )
     }

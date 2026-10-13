@@ -92,7 +92,7 @@ class Calculate4ACActivitiy : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "4AC计算",
+                title = getString(R.string.msg_calc_4ac),
                 showBackButton = true
             )
         }

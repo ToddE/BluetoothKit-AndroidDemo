@@ -82,7 +82,7 @@ class Calculate8_SmoothActivitiy : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "8电极计算",
+                title = getString(R.string.msg_calc_8),
                 showBackButton = true
             )
         }

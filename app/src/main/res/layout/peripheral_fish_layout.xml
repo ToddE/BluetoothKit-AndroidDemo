@@ -104,7 +104,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="归零" />
+                    android:text="@string/ui_zero" />
 
             </LinearLayout>
 
@@ -116,7 +116,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="蜂鸣器开关" />
+                    android:text="@string/ui_buzzer_switch" />
 
                 <ToggleButton
                     android:id="@+id/switchBuzzerToggleBtn"

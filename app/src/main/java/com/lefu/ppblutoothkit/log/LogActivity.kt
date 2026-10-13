@@ -104,7 +104,7 @@ class LogActivity : BaseImmersivePermissionActivity() {
                 Logger.d("delete logFilePath: ${file.path}")
                 MsgDialog.init(supportFragmentManager)
                     .setTitle(getString(R.string.tips))
-                    .setMessage("确认删除？")
+                    .setMessage(getString(R.string.msg_confirm_delete))
                     .setAnimStyle(R.style.dialog_)
                     .setCancelableAll(true)
                     .setNegativeButton(getString(R.string.cancel))

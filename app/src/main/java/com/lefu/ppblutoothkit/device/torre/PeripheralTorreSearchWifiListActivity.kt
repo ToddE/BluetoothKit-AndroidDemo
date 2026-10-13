@@ -62,7 +62,7 @@ class PeripheralTorreSearchWifiListActivity : BaseImmersivePermissionActivity() 
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "WiFi列表搜索",
+                title = getString(R.string.msg_wifi_list_search),
                 showBackButton = true
             )
         }

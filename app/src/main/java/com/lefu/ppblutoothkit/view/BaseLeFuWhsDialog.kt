@@ -83,7 +83,7 @@ abstract class BaseLeFuWhsDialog<T : BaseLeFuWhsDialog<T>> : DialogFragment() {
             baseParams.layoutRes > 0 -> inflater.inflate(baseParams.layoutRes, container)
             baseParams.view != null -> baseParams.view!!
             else ->
-                throw IllegalArgumentException("请先设置LayoutRes或View!")
+                throw IllegalArgumentException("Set LayoutRes or View first!")
         }
     }
 

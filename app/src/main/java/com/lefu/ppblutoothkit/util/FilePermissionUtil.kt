@@ -1,5 +1,6 @@
 package com.lefu.ppblutoothkit.util
 
+import com.lefu.ppblutoothkit.R
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
@@ -54,15 +55,15 @@ object FilePermissionUtil {
         intent.putExtra(Intent.EXTRA_ALARM_COUNT, true)
         //不限制选取类型
         intent.type = "*/*"
-        activity.startActivityForResult(Intent.createChooser(intent, "选择DFU文件"), requestCode)
+        activity.startActivityForResult(Intent.createChooser(intent, activity.getString(R.string.msg_choose_dfu_file)), requestCode)
     }
 
     fun handleSingleDocument(activity: Activity, data: Intent): String {
         val uri = data.data
         val dfuFilePath = activity.getFilesDir().getAbsolutePath() + "/dfu/"
-        //addPrint("DFU 文件解压路径：$dfuFilePath")
+        //addPrint(getString(R.string.msg_dfu_unzip_path, dfuFilePath))
         return ZipFileUtil.zipUriToLocalFile(activity, uri, dfuFilePath) { filePath ->
-            Logger.d("DFU 升级文件路径：$filePath\n")
+            Logger.d(getString(R.string.msg_dfu_file_path, filePath))
         }
 //        String filePath = FileUtils.getRealPath(this, uri);
 //        isCopyEnd = true;    isCopyEnd = true;

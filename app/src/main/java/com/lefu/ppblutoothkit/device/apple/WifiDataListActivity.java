@@ -50,7 +50,7 @@ public class WifiDataListActivity extends BaseImmersivePermissionActivity {
         if (toolbar != null) {
             setupUnifiedToolbar(
                 toolbar,
-                "WiFi数据列表",
+                getString(R.string.msg_wifi_data_list),
                 true
             );
         }

@@ -116,7 +116,7 @@ class UserinfoActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "用户信息",
+                title = getString(R.string.msg_user_info),
                 showBackButton = true
             )
         }

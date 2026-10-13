@@ -168,7 +168,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="同步食物"
+                    android:text="@string/ui_sync_food"
                     android:textAllCaps="false" />
 
                 <Button
@@ -176,7 +176,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="获取食物列表"
+                    android:text="@string/ui_get_food_list"
                     android:textAllCaps="false" />
 
                 <Button
@@ -184,7 +184,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="删除食物"
+                    android:text="@string/ui_delete_food"
                     android:textAllCaps="false" />
 
             </LinearLayout>
@@ -199,7 +199,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="归零"
+                    android:text="@string/ui_zero"
                     android:textAllCaps="false" />
 
                 <Button
@@ -207,7 +207,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="开始食物管理"
+                    android:text="@string/ui_start_food_management"
                     android:textAllCaps="false" />
 
                 <Button
@@ -215,7 +215,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="退出食物管理"
+                    android:text="@string/ui_exit_food_management"
                     android:textAllCaps="false" />
 
 
@@ -229,7 +229,7 @@
                     android:id="@+id/testImpedance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="测试阻抗解析"
+                    android:text="@string/ui_test_impedance_parsing"
                     android:textAllCaps="false" />
 
             </LinearLayout>

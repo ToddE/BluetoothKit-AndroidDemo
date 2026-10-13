@@ -1,5 +1,6 @@
 package com.lefu.ppblutoothkit.util;
 
+import com.lefu.ppblutoothkit.R;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -46,7 +47,7 @@ public class FileUtil {
 
         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
         shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        context.startActivity(Intent.createChooser(shareIntent, "分享文件"));
+        context.startActivity(Intent.createChooser(shareIntent, context.getString(R.string.msg_share_file)));
     }
 
 

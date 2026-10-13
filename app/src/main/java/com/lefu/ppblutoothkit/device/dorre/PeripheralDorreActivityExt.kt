@@ -1,5 +1,6 @@
 package com.lefu.ppblutoothkit.device
 
+import com.lefu.ppblutoothkit.R
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -47,16 +48,16 @@ fun PeripheralDorreActivity.performFileSearch() {
     intent.putExtra(Intent.EXTRA_ALARM_COUNT, true)
     //不限制选取类型
     intent.type = "*/*"
-    startActivityForResult(Intent.createChooser(intent, "选择DFU文件"), 1)
+    startActivityForResult(Intent.createChooser(intent, getString(R.string.msg_choose_dfu_file)), 1)
 }
 
 fun PeripheralDorreActivity.handleSingleDocument(data: Intent) {
     val uri = data.data
     dfuFilePath = this.getFilesDir().getAbsolutePath() + "/dfu/"
     dfuFilePath = ZipFileUtil.zipUriToLocalFile(this, uri, dfuFilePath) { filePath ->
-        addPrint("DFU 升级文件路径：$filePath\n")
+        addPrint(getString(R.string.msg_dfu_file_path, filePath))
     }
-    addPrint("DFU 文件解压路径：$dfuFilePath")
+    addPrint(getString(R.string.msg_dfu_unzip_path, dfuFilePath))
 //        String filePath = FileUtils.getRealPath(this, uri);
 //        isCopyEnd = true;    isCopyEnd = true;
 //        if (filePath.endsWith(".zip")) {

@@ -59,13 +59,13 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dimens_60dp"
                 android:layout_weight="1"
-                android:hint="请输入重量" />
+                android:hint="@string/ui_enter_weight" />
 
             <Button
                 android:id="@+id/unit_changeBTN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="单位换算" />
+                android:text="@string/ui_unit_conversion" />
 
         </LinearLayout>
 

@@ -133,7 +133,7 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Torre设备",
+                title = getString(R.string.msg_title_torre),
                 showBackButton = true
             )
         }
@@ -184,7 +184,7 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
             controller?.getTorreDeviceManager()?.syncUserHistory(userModel, userHistoryDataInterface)
         }
         findViewById<Button>(R.id.syncTouristHistoryData).setOnClickListener {
-            addPrint("syncTouristHistoryData username:游客")
+            addPrint(getString(R.string.msg_sync_tourist_history))
             touristDatas.clear()
             controller?.getTorreDeviceManager()?.syncTouristHistory(touristHistoryDataInterface)
         }
@@ -326,7 +326,7 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
         findViewById<Button>(R.id.device_set_startLocalOTA).setOnClickListener {
             //wifi 本地必须有Test的Wifi, 且密码是：12345678 秤会自动连接该Wifi
             //ssid: Test password: 12345678
-            addPrint("startLocalOTA 本地必须有Test的Wifi, 且密码是：12345678 秤会自动连接该Wifi")
+            addPrint(getString(R.string.msg_start_local_ota_hint))
             controller?.getTorreDeviceManager()?.startLocalOTA(otaStateListener)
         }
         if (PPScaleHelper.isFuncTypeWifi(deviceModel?.deviceFuncType)) {
@@ -606,15 +606,15 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
          * 超重
          */
         override fun monitorOverWeight() {
-            weightMeasureState?.text = "超重"
+            weightMeasureState?.text = getString(R.string.msg_overweight)
         }
 
         /**
          * 设备关机回调，目前只在Torre设备上生效
          */
         override fun onDeviceShutdown() {
-            weightMeasureState?.text = "关机"
-            addPrint("关机")
+            weightMeasureState?.text = getString(R.string.msg_power_off)
+            addPrint(getString(R.string.msg_power_off))
         }
 
     }
@@ -729,11 +729,11 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
         override fun demoModeSwitchCallBack(type: Int, state: Int) {
             if (type == 1) {
                 if (state == 0) {
-                    addPrint("设置成功")
-                    Toast.makeText(this@PeripheralTorreActivity, "设置成功", Toast.LENGTH_SHORT).show()
+                    addPrint(getString(R.string.msg_set_success))
+                    Toast.makeText(this@PeripheralTorreActivity, getString(R.string.msg_set_success), Toast.LENGTH_SHORT).show()
                 } else {
-                    addPrint("设置失败")
-                    Toast.makeText(this@PeripheralTorreActivity, "设置失败", Toast.LENGTH_SHORT).show()
+                    addPrint(getString(R.string.msg_set_failed))
+                    Toast.makeText(this@PeripheralTorreActivity, getString(R.string.msg_set_failed), Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -957,7 +957,7 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
             if (Environment.isExternalStorageManager()) {
                 performFileSearch()
             } else {
-                Toast.makeText(this@PeripheralTorreActivity, "存储权限获取失败", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PeripheralTorreActivity, getString(R.string.msg_storage_permission_failed), Toast.LENGTH_SHORT).show()
             }
         } else if (resultCode == RESULT_OK && data != null) {
             //当单选选了一个文件后返回
@@ -983,7 +983,7 @@ class PeripheralTorreActivity : BaseImmersivePermissionActivity() {
             ) {
                 performFileSearch()
             } else {
-                Toast.makeText(this@PeripheralTorreActivity, "存储权限获取失败", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PeripheralTorreActivity, getString(R.string.msg_storage_permission_failed), Toast.LENGTH_SHORT).show()
             }
         }
     }

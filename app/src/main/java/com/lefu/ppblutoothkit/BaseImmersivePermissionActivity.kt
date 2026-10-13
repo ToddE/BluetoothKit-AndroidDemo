@@ -192,11 +192,11 @@ abstract class BaseImmersivePermissionActivity : AppCompatActivity() {
                         appPermissionCallback.onGranted(mutableListOf(), false)
                         
                         if (doNotAskAgain) {
-                            Toast.makeText(this@BaseImmersivePermissionActivity, "权限被永久拒绝，请到设置中手动开启", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@BaseImmersivePermissionActivity, getString(R.string.msg_permission_permanently_denied), Toast.LENGTH_LONG).show()
                             // 可以引导用户到设置页面
                             XXPermissions.startPermissionActivity(this@BaseImmersivePermissionActivity, deniedPermissions)
                         } else {
-                            Toast.makeText(this@BaseImmersivePermissionActivity, "需要相关权限才能正常使用蓝牙功能", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@BaseImmersivePermissionActivity, getString(R.string.msg_permission_required_bt), Toast.LENGTH_SHORT).show()
                         }
                     }
                 })
@@ -232,7 +232,7 @@ abstract class BaseImmersivePermissionActivity : AppCompatActivity() {
             if (CommonUtils.isLocationEnabled(this) && CommonUtils.isOpenBluetooth()) {
             } else {
                 if (CommonUtils.isLocationEnabled(this).not()) {
-                    Toast.makeText(this, "请开启定位开关", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, getString(R.string.msg_turn_on_location), Toast.LENGTH_LONG).show()
                 }
                 if (CommonUtils.isOpenBluetooth().not()) {
                     openBluetooth()
@@ -250,7 +250,7 @@ abstract class BaseImmersivePermissionActivity : AppCompatActivity() {
                 if (CommonUtils.isLocationEnabled(this)) {
                     //已经可以进行蓝牙操作
                 } else {
-                    Toast.makeText(this, "请开启定位开关", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, getString(R.string.msg_turn_on_location), Toast.LENGTH_LONG).show()
                 }
             }
         }

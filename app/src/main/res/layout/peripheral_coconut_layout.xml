@@ -98,7 +98,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="同步用户" />
+                    android:text="@string/ui_sync_user" />
 
                 <Button
                     android:id="@+id/syncTime"

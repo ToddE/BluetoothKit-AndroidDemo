@@ -17,7 +17,7 @@
     <string name="binding_device">Binding Equipment</string>
     <string name="equipment_management">Device Management</string>
     <string name="unit_normal">0：KG, 1: LB
-         2：ST ,3: 斤
+         2：ST ,3: jin
          4：g, 5：lb:oz
          6：oz 7：ml(water)
          8: ml（milk）</string>
@@ -171,4 +171,103 @@
     <string name="fetch">Fetch MTU</string>
     <string name="update_ca">Update CA</string>
 
+
+    <!-- Strings moved from layouts -->
+    <string name="ui_connecting_device">Connecting to device, please wait...</string>
+    <string name="ui_bmdj_intro_title">Eyes-Closed Single-Leg Stand: Details</string>
+    <string name="ui_receiving_data">Receiving data</string>
+    <string name="ui_enter_weight">Enter weight</string>
+    <string name="ui_unit_conversion">Unit conversion</string>
+    <string name="ui_searching">Searching...</string>
+    <string name="ui_current_weight">Current weight</string>
+    <string name="ui_share_data_note">Note: after you accept, the other person can see your weight and other body data</string>
+    <string name="ui_read_battery">Read battery</string>
+    <string name="ui_broadcast_data">Broadcast data</string>
+    <string name="ui_get_rgb_mode">Get RGB mode</string>
+    <string name="ui_seven_day_data">7-day data</string>
+    <string name="ui_factory_mode">Factory mode</string>
+    <string name="ui_demo_mode">Demo mode</string>
+    <string name="ui_current_domain">Current domain</string>
+    <string name="ui_select_dfu_file">Select DFU file</string>
+    <string name="ui_sync_user">Sync user</string>
+    <string name="ui_set_user_info_change">Set user info change</string>
+    <string name="ui_get_user_info_change">Get user info change</string>
+    <string name="ui_zero">Zero</string>
+    <string name="ui_buzzer_switch">Buzzer on/off</string>
+    <string name="ui_impedance_mode">Impedance mode</string>
+    <string name="ui_sync_food">Sync food</string>
+    <string name="ui_get_food_list">Get food list</string>
+    <string name="ui_delete_food">Delete food</string>
+    <string name="ui_start_food_management">Start food management</string>
+    <string name="ui_exit_food_management">Exit food management</string>
+    <string name="ui_test_impedance_parsing">Test impedance parsing</string>
+    <string name="ui_delete_single_user">Delete single user</string>
+    <string name="ui_device_name_label">Device name</string>
+    <string name="ui_current_status">Current status</string>
+    <string name="ui_no_device_selected">No device selected</string>
+    <string name="ui_select_bluetooth_device">Select Bluetooth device:</string>
+    <string name="ui_select_device">Select device</string>
+    <string name="ui_firmware_version">Firmware version:</string>
+    <string name="ui_select_firmware">Select firmware</string>
+    <string name="ui_ota_count">OTA count:</string>
+    <string name="ui_current_count">Current count:</string>
+    <string name="ui_start_test">Start test</string>
+    <string name="ui_torre_dfu_stress_test">Torre DFU stress test</string>
+
+    <!-- Strings moved from code -->
+    <string name="msg_turn_on_location">Please turn on location</string>
+    <string name="msg_permission_permanently_denied">Permission permanently denied. Enable it manually in Settings</string>
+    <string name="msg_permission_required_bt">The required permissions are needed to use Bluetooth</string>
+    <string name="msg_user_info">User info</string>
+    <string name="msg_bt_permission_denied">Bluetooth cannot be used while the permission is denied. Enable it later in the device permission settings</string>
+    <string name="msg_title_coconut">Coconut device</string>
+    <string name="msg_overweight">Overweight</string>
+    <string name="msg_fat_calc_done">Body fat calculation done. Error code: %1$s, body fat: %2$s, heart rate: %3$s</string>
+    <string name="msg_title_forre">Forre device</string>
+    <string name="msg_power_off">Power off</string>
+    <string name="msg_storage_permission_failed">Failed to get storage permission</string>
+    <string name="msg_start_local_ota_hint">startLocalOTA: the local network must have a Wi-Fi named Test with password 12345678. The scale connects to it automatically</string>
+    <string name="msg_current_domain_value">Current domain: %1$s</string>
+    <string name="msg_err_unknown">Unknown error (errorCode=%1$s)</string>
+    <string name="msg_err_xor">XOR check failed</string>
+    <string name="msg_err_seq">Packet sequence error</string>
+    <string name="msg_err_len">Length error</string>
+    <string name="msg_err_cert">Certificate check failed</string>
+    <string name="msg_err_cert_expiry">Certificate validity period error</string>
+    <string name="msg_title_borre">Borre device</string>
+    <string name="msg_set_success">Set successfully</string>
+    <string name="msg_set_failed">Set failed</string>
+    <string name="msg_sync_tourist_history">syncTouristHistoryData username: guest</string>
+    <string name="msg_title_durian">Durian device</string>
+    <string name="msg_title_egg">Egg device</string>
+    <string name="msg_dfu_file_path">DFU upgrade file path: %1$s\n</string>
+    <string name="msg_dfu_unzip_path">DFU file unzip path: %1$s</string>
+    <string name="msg_choose_dfu_file">Choose DFU file</string>
+    <string name="msg_title_torre">Torre device</string>
+    <string name="msg_title_hamburger">Hamburger device</string>
+    <string name="msg_title_banana">Banana device</string>
+    <string name="msg_title_dorre">Dorre device</string>
+    <string name="msg_start_impedance_test">Starting impedance parsing test...</string>
+    <string name="msg_title_grapes">Grapes device</string>
+    <string name="msg_title_ice">Ice device</string>
+    <string name="msg_impedance_set_success">controlImpendanceCallBack: set successfully</string>
+    <string name="msg_impedance_set_failed">controlImpendanceCallBack: set failed</string>
+    <string name="msg_device_battery_low">Device battery low</string>
+    <string name="msg_title_jambul">Jambul device</string>
+    <string name="msg_title_fish">Fish device</string>
+    <string name="msg_wifi_list_search">Wi-Fi list search</string>
+    <string name="msg_wifi_config">Wi-Fi configuration</string>
+    <string name="msg_wifi_weight_detail">Wi-Fi weight data details</string>
+    <string name="msg_confirm_delete">Confirm delete?</string>
+    <string name="msg_device_scan">Device scan</string>
+    <string name="msg_filter_name">Filter name</string>
+    <string name="msg_calc_4ac_dual">4-electrode AC dual-frequency algorithm</string>
+    <string name="msg_calc_dc">DC scale calculation</string>
+    <string name="msg_calc_8">8-electrode calculation</string>
+    <string name="msg_calc_4ac">4AC calculation</string>
+    <string name="msg_calc_manager">Calculation manager</string>
+    <string name="msg_body_data_state">Body data state</string>
+    <string name="msg_sd_unavailable">SD card unavailable</string>
+    <string name="msg_wifi_data_list">Wi-Fi data list</string>
+    <string name="msg_share_file">Share file</string>
 </resources>

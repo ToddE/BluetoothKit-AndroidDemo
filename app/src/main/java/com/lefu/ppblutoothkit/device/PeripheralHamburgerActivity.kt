@@ -76,7 +76,7 @@ class PeripheralHamburgerActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Hamburger设备",
+                title = getString(R.string.msg_title_hamburger),
                 showBackButton = true
             )
         }

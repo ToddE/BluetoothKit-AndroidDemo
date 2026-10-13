@@ -93,7 +93,7 @@ object PPBluetoothPeripheralLorreInstance {
         //下发当前食物信息
         currentNum = 0
         foodInfos?.forEach {
-            addPrint("syncFoodInfo 同步的食物：${it?.foodNo} foodRemoteId:${it?.foodRemoteId}")
+            addPrint("syncFoodInfo synced food: ${it?.foodNo} foodRemoteId:${it?.foodRemoteId}")
         }
         if (foodInfos?.isNotEmpty() == true) {
             val foodInfo = foodInfos.get(currentNum)

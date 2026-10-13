@@ -88,7 +88,7 @@ class PeripheralDurianActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Durian设备",
+                title = getString(R.string.msg_title_durian),
                 showBackButton = true
             )
         }
@@ -156,7 +156,7 @@ class PeripheralDurianActivity : BaseImmersivePermissionActivity() {
          * 超重
          */
         override fun monitorOverWeight() {
-            weightMeasureState?.text = "超重"
+            weightMeasureState?.text = getString(R.string.msg_overweight)
         }
 
     }

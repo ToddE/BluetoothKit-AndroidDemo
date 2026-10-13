@@ -133,7 +133,7 @@ class PeripheralForreActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Forre设备",
+                title = getString(R.string.msg_title_forre),
                 showBackButton = true
             )
         }
@@ -228,7 +228,7 @@ class PeripheralForreActivity : BaseImmersivePermissionActivity() {
         findViewById<Button>(R.id.device_set_startLocalOTA).setOnClickListener {
             //wifi 本地必须有Test的Wifi, 且密码是：12345678 秤会自动连接该Wifi
             //ssid: Test password: 12345678
-            addPrint("startLocalOTA 本地必须有Test的Wifi, 且密码是：12345678 秤会自动连接该Wifi")
+            addPrint(getString(R.string.msg_start_local_ota_hint))
             controller?.getTorreDeviceManager()?.startLocalOTA(otaStateListener)
         }
         if (PPScaleHelper.isFuncTypeWifi(deviceModel?.deviceFuncType)) {
@@ -363,7 +363,7 @@ class PeripheralForreActivity : BaseImmersivePermissionActivity() {
                 //调用计算库计算体脂信息
                 Logger.d("PeripheralBorreActivity 四电极 双频 impedance:${bodyBaseModel?.impedance} impedance100EnCode:${bodyBaseModel?.ppImpedance100EnCode}")
                 val fatModel = bodyBaseModel?.let { PPBodyFatModel(it) }
-                addPrint("体脂计算完成 错误码：${fatModel?.errorType} 体脂率${fatModel?.ppFat} 心率${fatModel?.ppHeartRate}")
+                addPrint(getString(R.string.msg_fat_calc_done, fatModel?.errorType, fatModel?.ppFat, fatModel?.ppHeartRate))
                 bodyBaseModel?.let { showCalculateDialog(deviceModel, it) }
             }
 
@@ -384,15 +384,15 @@ class PeripheralForreActivity : BaseImmersivePermissionActivity() {
          * 超重
          */
         override fun monitorOverWeight() {
-            weightMeasureState?.text = "超重"
+            weightMeasureState?.text = getString(R.string.msg_overweight)
         }
 
         /**
          * 设备关机回调，目前只在Torre设备上生效
          */
         override fun onDeviceShutdown() {
-            weightMeasureState?.text = "关机"
-            addPrint("关机")
+            weightMeasureState?.text = getString(R.string.msg_power_off)
+            addPrint(getString(R.string.msg_power_off))
         }
 
     }
@@ -627,7 +627,7 @@ class PeripheralForreActivity : BaseImmersivePermissionActivity() {
             if (Environment.isExternalStorageManager()) {
                 performFileSearch()
             } else {
-                Toast.makeText(this@PeripheralForreActivity, "存储权限获取失败", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PeripheralForreActivity, getString(R.string.msg_storage_permission_failed), Toast.LENGTH_SHORT).show()
             }
         } else if (resultCode == RESULT_OK && data != null) {
             //当单选选了一个文件后返回
@@ -653,7 +653,7 @@ class PeripheralForreActivity : BaseImmersivePermissionActivity() {
             ) {
                 performFileSearch()
             } else {
-                Toast.makeText(this@PeripheralForreActivity, "存储权限获取失败", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PeripheralForreActivity, getString(R.string.msg_storage_permission_failed), Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -35,7 +35,7 @@
         android:id="@+id/mTipsTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="注：接受后对方可以看您的体重等身体详细数据"
+        android:text="@string/ui_share_data_note"
         android:textColor="#758E93"
         android:textSize="14sp"
         android:layout_marginStart="20dp"

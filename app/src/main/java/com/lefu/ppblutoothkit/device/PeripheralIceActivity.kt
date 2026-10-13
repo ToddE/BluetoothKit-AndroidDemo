@@ -115,11 +115,11 @@ class PeripheralIceActivity : BaseImmersivePermissionActivity() {
                 override fun controlImpendanceCallBack(type: Int, state: Int) {
                     when (state) {
                         0 -> {
-                            addPrint("controlImpendanceCallBack:设置成功")
+                            addPrint(getString(R.string.msg_impedance_set_success))
                         }
 
                         1 -> {
-                            addPrint("controlImpendanceCallBack:设置失败")
+                            addPrint(getString(R.string.msg_impedance_set_failed))
                         }
                     }
                 }
@@ -135,7 +135,7 @@ class PeripheralIceActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Ice设备",
+                title = getString(R.string.msg_title_ice),
                 showBackButton = true
             )
         }
@@ -314,7 +314,7 @@ class PeripheralIceActivity : BaseImmersivePermissionActivity() {
                     } else if (state == 0) {
                         Logger.d("设备电量检测结果打印，如果低于20%拦截并提示用户充电  power：$power")
                         if (power < 20) {
-                            addPrint("设备电量低")
+                            addPrint(getString(R.string.msg_device_battery_low))
                         } else {
                             controller?.startUserOTA(object : OnOTAStateListener() {
                                 override fun onStartUpdate() {
@@ -356,7 +356,7 @@ class PeripheralIceActivity : BaseImmersivePermissionActivity() {
                     } else if (state == 0) {
                         Logger.d("设备电量检测结果打印，如果低于20%拦截并提示用户充电  power：$power")
                         if (power < 20) {
-                            addPrint("设备电量低")
+                            addPrint(getString(R.string.msg_device_battery_low))
                         } else {
                             controller?.startLocalOTA(object : OnOTAStateListener() {
                                 override fun onStartUpdate() {
@@ -392,7 +392,7 @@ class PeripheralIceActivity : BaseImmersivePermissionActivity() {
 
     override fun onResume() {
         super.onResume()
-        mCurrentHostUrl?.text = "当前域名：${NetUtil.getScaleDomain()}"
+        mCurrentHostUrl?.text = getString(R.string.msg_current_domain_value, NetUtil.getScaleDomain())
     }
 
     val deviceSetInterface = object : PPDeviceSetInfoInterface {
@@ -512,7 +512,7 @@ class PeripheralIceActivity : BaseImmersivePermissionActivity() {
          * 超重
          */
         override fun monitorOverWeight() {
-            weightMeasureState?.text = "超重"
+            weightMeasureState?.text = getString(R.string.msg_overweight)
         }
 
     }

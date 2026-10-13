@@ -156,7 +156,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="删除单个用户"
+                    android:text="@string/ui_delete_single_user"
                     android:textAllCaps="false" />
 
                 <Button
@@ -315,7 +315,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="工厂模式" />
+                    android:text="@string/ui_factory_mode" />
 
                 <ToggleButton
                     android:id="@+id/switchModeToggleBtn"
@@ -329,7 +329,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="演示模式" />
+                    android:text="@string/ui_demo_mode" />
 
                 <ToggleButton
                     android:id="@+id/switchDemoModeToggleBtn"
@@ -438,7 +438,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="选则DFU文件" />
+                        android:text="@string/ui_select_dfu_file" />
 
                     <Button
                         android:id="@+id/device_set_startDFU"
@@ -500,7 +500,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimens_4dp"
-                android:text="当前的域名"
+                android:text="@string/ui_current_domain"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="@dimen/text_sp16" />
 

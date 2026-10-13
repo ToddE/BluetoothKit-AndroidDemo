@@ -58,7 +58,7 @@ class CalculateManagerActivity : BaseImmersivePermissionActivity(), View.OnClick
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "计算管理",
+                title = getString(R.string.msg_calc_manager),
                 showBackButton = true
             )
         }

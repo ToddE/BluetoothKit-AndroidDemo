@@ -1,5 +1,6 @@
 package com.lefu.ppblutoothkit.device.torre;
 
+import com.lefu.ppblutoothkit.R;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
@@ -97,7 +98,7 @@ public class ZipFileUtil {
         Log.d("", "outFilePath : " + outFilePath);
 
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            Toast.makeText(mContext, "SD卡不可用~", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, mContext.getString(R.string.msg_sd_unavailable), Toast.LENGTH_SHORT).show();
             return "";
         }
         String PATH = outFilePath;

@@ -56,7 +56,7 @@ class BleConfigWifiActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "WiFi配置",
+                title = getString(R.string.msg_wifi_config),
                 showBackButton = true
             )
         }

@@ -23,7 +23,7 @@
             android:layout_height="@dimen/dimens_50dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:text="TorreDFU压测"
+            android:text="@string/ui_torre_dfu_stress_test"
             android:textAllCaps="false" />
 
 

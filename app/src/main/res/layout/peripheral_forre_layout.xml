@@ -197,7 +197,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_40"
-                    android:text="工厂模式" />
+                    android:text="@string/ui_factory_mode" />
 
                 <ToggleButton
                     android:id="@+id/switchModeToggleBtn"
@@ -257,7 +257,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="选则DFU文件" />
+                        android:text="@string/ui_select_dfu_file" />
 
                     <Button
                         android:id="@+id/device_set_startDFU"

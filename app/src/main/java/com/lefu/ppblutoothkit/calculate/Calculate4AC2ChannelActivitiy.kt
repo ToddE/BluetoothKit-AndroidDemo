@@ -58,7 +58,7 @@ class Calculate4AC2ChannelActivitiy : BaseImmersivePermissionActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setupUnifiedToolbar(
             toolbar = toolbar,
-            title = "4电极交流双频算法",
+            title = getString(R.string.msg_calc_4ac_dual),
             showBackButton = true
         )
     }

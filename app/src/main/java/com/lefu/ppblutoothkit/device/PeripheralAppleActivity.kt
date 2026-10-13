@@ -468,7 +468,7 @@ class PeripheralAppleActivity : BaseImmersivePermissionActivity() {
         if (PPScaleHelper.isFuncTypeWifi(deviceModel?.deviceFuncType)) {
             wifiConfigLayout?.visibility = View.VISIBLE
             deviceCaLayout?.visibility = View.VISIBLE
-            mCurrentHostUrl?.text = "当前域名：${NetUtil.getScaleDomain()}"
+            mCurrentHostUrl?.text = getString(R.string.msg_current_domain_value, NetUtil.getScaleDomain())
         } else {
             wifiConfigLayout?.visibility = View.GONE
             deviceCaLayout?.visibility = View.GONE
@@ -572,12 +572,12 @@ class PeripheralAppleActivity : BaseImmersivePermissionActivity() {
 
         override fun onCAInfoFail(errorCode: Int) {
             val reason = when (errorCode) {
-                1 -> "异或校验失败"
-                2 -> "包序错误"
-                3 -> "长度错误"
-                4 -> "证书校验失败"
-                5 -> "证书有效期异常"
-                else -> "未知错误(errorCode=$errorCode)"
+                1 -> getString(R.string.msg_err_xor)
+                2 -> getString(R.string.msg_err_seq)
+                3 -> getString(R.string.msg_err_len)
+                4 -> getString(R.string.msg_err_cert)
+                5 -> getString(R.string.msg_err_cert_expiry)
+                else -> getString(R.string.msg_err_unknown, errorCode)
             }
             addPrint("CA Info Fail: $reason")
         }

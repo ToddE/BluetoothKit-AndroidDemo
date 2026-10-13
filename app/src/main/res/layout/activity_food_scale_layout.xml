@@ -12,7 +12,7 @@
         android:layout_height="19dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:text="当前重量" />
+        android:text="@string/ui_current_weight" />
 
     <TextView
         android:id="@+id/weightTextView"

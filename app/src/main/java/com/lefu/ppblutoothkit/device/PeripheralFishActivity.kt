@@ -79,7 +79,7 @@ class PeripheralFishActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Fish设备",
+                title = getString(R.string.msg_title_fish),
                 showBackButton = true
             )
         }

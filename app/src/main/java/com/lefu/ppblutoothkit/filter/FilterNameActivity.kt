@@ -59,7 +59,7 @@ class FilterNameActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "过滤器名称",
+                title = getString(R.string.msg_filter_name),
                 showBackButton = true
             )
         }

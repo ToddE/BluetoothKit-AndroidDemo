@@ -86,7 +86,7 @@ class PeripheralJambulActivity : BaseImmersivePermissionActivity() {
         toolbar?.let {
             setupUnifiedToolbar(
                 toolbar = it,
-                title = "Jambul设备",
+                title = getString(R.string.msg_title_jambul),
                 showBackButton = true
             )
         }
@@ -161,7 +161,7 @@ class PeripheralJambulActivity : BaseImmersivePermissionActivity() {
          * 超重
          */
         override fun monitorOverWeight() {
-            weightMeasureState?.text = "超重"
+            weightMeasureState?.text = getString(R.string.msg_overweight)
         }
 
     }
