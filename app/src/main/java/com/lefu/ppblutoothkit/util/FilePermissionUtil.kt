@@ -63,7 +63,7 @@ object FilePermissionUtil {
         val dfuFilePath = activity.getFilesDir().getAbsolutePath() + "/dfu/"
         //addPrint(getString(R.string.msg_dfu_unzip_path, dfuFilePath))
         return ZipFileUtil.zipUriToLocalFile(activity, uri, dfuFilePath) { filePath ->
-            Logger.d(getString(R.string.msg_dfu_file_path, filePath))
+            Logger.d("DFU 升级文件路径：$filePath\n")
         }
 //        String filePath = FileUtils.getRealPath(this, uri);
 //        isCopyEnd = true;    isCopyEnd = true;
